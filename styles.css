@@ -23,6 +23,8 @@
     align-items: center;
     color: white;
     margin-left: 0;
+    margin-right: 5px;
+    border: 1px solid red;
 
 }
 
@@ -35,6 +37,8 @@
     font-size: 1.8rem;
     align-items: center;
     margin-right: 0;
+    border: 1px solid red;
+
 
 }
 
@@ -50,7 +54,7 @@
 
 .input {
     width: 60%;
-    min-width: 250px;
+    min-width: 200px;
 }
 
 .input input {
@@ -180,12 +184,20 @@
 
     .navbar.left .business-logo,
     .navbar.right,
-    .profile-shopping-cart,
-    .account {
+    .profile-shopping-cart {
         font-size: 20px;
     }
 
+    .account {
+        font-size: 15px;
+    }
+
     .navbar.left {
-        width: 240px;
+        min-width: 240px;
+    }
+
+    .navbar.right .fa-search {
+        height: 30px;
+        font-size: 20px
     }
 }
