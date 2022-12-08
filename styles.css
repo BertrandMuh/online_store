@@ -7,7 +7,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
     height: 120px;
     background: rgb(247, 163, 5);
     position: fixed;
@@ -18,27 +17,97 @@
 }
 
 .navbar.left {
-    width: max-content;
+    width: 500px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: white;
-    margin-left: 40px;
+    margin-left: 0;
+
 }
 
 .navbar.right {
-    width: 50%;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: right;
     color: white;
-    margin-right: 40px;
+    margin-right: 0;
     font-size: 1.8rem;
     align-items: center;
+    margin-right: 0;
+
+}
+
+.profile-shopping-cart {
+    align-items: center;
+    width: 20%;
+    min-width: 300px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.input {
+    width: 60%;
+    min-width: 250px;
+}
+
+.input input {
+    width: 100%;
+    border-radius: 0.2rem 0 0 0.2rem;
+    border: 0 solid white;
+    font-size: 15px;
+    padding-left: 10px;
+    color: black;
+    height: border-box;
 }
 
 
+.navbar.right .fa-search {
+    background: green;
+    width: 70px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0.2rem 0.2rem 0;
+    font-size: 25px;
+
+}
+
+.login {
+    margin-left: 0;
+    width: 50%;
+}
+
+.fa-user {
+    display: none;
+}
+
+.cart-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    border-left: 1px solid rgba(247, 233, 233, 0.4);
+    margin-right: 0;
+
+}
+
+.cart-div div {
+    margin-right: 12.5%
+}
+
+.account {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: normal;
+}
+
 .menu-bars {
     margin-right: 15px;
+    margin-left: 20px;
     font-size: 50px;
     width: max-content;
     height: 30px;
@@ -70,69 +139,12 @@
     justify-content: space-around;
 }
 
-.profile-shopping-cart {
-    align-items: center;
-    width: 30%;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-}
-
-.input {
-    width: 60%
-}
-
-.input input {
-    width: 100%;
-    border-radius: 0.2rem 0 0 0.2rem;
-    border: 0px;
-    font-size: 20px;
-    padding-left: 10px;
-    color: black;
-    height: 42px;
-}
 
 .fa,
 .cart-div,
 .login span:last-child,
 .business-logo {
     cursor: pointer;
-}
-
-.navbar.right .fa-search {
-    background: green;
-    width: 70px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0 0.2rem 0.2rem 0;
-    font-size: 25px;
-
-}
-
-.fa-user {
-    display: none;
-}
-
-.cart-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    border-left: 1px solid white;
-    margin-left: 0;
-}
-
-.cart-div div {
-
-    margin-right: 12.5%
-}
-
-.account {
-    font-size: 1rem;
-    text-align: center;
-    font-weight: normal;
 }
 
 #main {
@@ -143,7 +155,7 @@
 }
 
 #product-category {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
@@ -164,67 +176,16 @@
     display: none;
 }
 
+@media(max-width: 840px) {
 
-@media (max-width: 1340px) {
-    body {
-        padding: auto 50px;
-    }
-
-    .profile-shopping-cart {
-        width: 15%;
-    }
-
-    .cart-div {
-        border: 0;
-    }
-
+    .navbar.left .business-logo,
+    .navbar.right,
+    .profile-shopping-cart,
     .account {
-        display: none;
+        font-size: 20px;
     }
 
-    .user-icon {
-        display: contents;
+    .navbar.left {
+        width: 240px;
     }
-
-    @media(max-width: 800px) {
-        .input input {
-            display: none;
-        }
-
-        .navbar.right {
-            width: 30%;
-        }
-
-        .navbar.right .fa-search {
-            background: none;
-        }
-
-        .profile-shopping-cart {
-            width: 50%;
-            justify-content: space-between;
-        }
-
-        #navbar {
-            height: 70px;
-        }
-
-        #main {
-            top: 70px
-        }
-
-        .navbar.left {
-            width: 40%;
-        }
-
-        .navbar .business-logo {
-            font-size: 3vw;
-        }
-
-        @media(max-width: 750px) {
-            #product-category {
-                display: none;
-            }
-        }
-    }
-
 }
