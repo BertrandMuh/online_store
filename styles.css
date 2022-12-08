@@ -205,11 +205,11 @@
         }
 
         #navbar {
-            height: 60px;
+            height: 70px;
         }
 
         #main {
-            top: 60px
+            top: 70px
         }
 
         .navbar.left {
@@ -217,7 +217,7 @@
         }
 
         .navbar .business-logo {
-            font-size: 1em;
+            font-size: 3vw;
         }
 
         @media(max-width: 750px) {
