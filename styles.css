@@ -29,13 +29,12 @@
     column-gap: 100px;
     width: 100%;
     margin: auto;
-    height: 40%;
+    height: 60%;
     align-items: center;
     justify-content: space-around;
 }
 
 .slide {
-
     width: 95%;
     position: relative;
     display: flex;
@@ -56,7 +55,7 @@ button {
     color: rgba(255, 255, 255, 0);
     border: 0;
     width: 4%;
-    height: 4vmax;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
 }
 
@@ -302,6 +301,13 @@ button:hover {
         margin: auto 5%;
     }
 
+    button {
+        display: block;
+        color: rgba(255, 255, 255, 1);
+        background: rgba(0, 0, 0, 0.3);
+        width: 4%;
+    }
+
     @media(max-width: 770px) {
         .user-icon {
             display: contents;
@@ -347,6 +353,25 @@ button:hover {
             @media(max-width: 530px) {
                 #product-category {
                     display: none;
+                }
+
+                .image:nth-of-type(odd) {
+                    display: none;
+                }
+
+                .image:nth-of-type(even) {
+                    filter: opacity(1);
+                    border-radius: 0.5rem;
+                    width: 84%;
+
+                }
+
+                button {
+                    display: block;
+                    color: rgba(255, 255, 255, 1);
+                    background: rgba(0, 0, 0, 0.3);
+                    width: 7%;
+                    border-radius: 0;
                 }
 
                 @media(max-width: 300px) {
