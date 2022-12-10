@@ -7,36 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <title>Organic Food SuperMarket</title>
 </head>
 
 <body>
     <nav id="navbar">
         <div class="navbar left">
-            <div class="menu-bars">
+            <div class="menu-bars" onclick="updateMessage()">
                 <div class="bars"></div>
                 <div class="bars"></div>
                 <div class="bars"></div>
             </div>
-            <span class="business-logo">
+            <span class="business-logo" onclick="refreshPage()">
                 Organic Food <br>SuperMarket
             </span>
         </div>
         <div class="navbar right">
             <div class="input">
                 <input type="text" placeholder="Search..." name="item">
-                <span class="fa fa-search"></span>
+                <span class="fa fa-search" onclick="updateMessage()"></span>
             </div>
-            <div class="profile-shopping-cart">
+            <div class="profile-shopping-cart" onclick="updateMessage()">
                 <div class="profile-shopping user-icon">
                     <span class='fa fa-user'></span>
                 </div>
-                <div class="account login">
+                <div class="account login" onclick="updateMessage()">
                     <span>Login / Signup</span><br>
                     <span>My account</span>
                 </div>
-                <div class="profile-shopping cart-div">
+                <div class="profile-shopping cart-div" onclick="updateMessage()">
                     <div>
                         <span class="fa fa-shopping-cart"></span>
                     </div>
@@ -45,25 +45,34 @@
             </div>
         </div>
         <div class="navbar-right2">
-            <span class="fa fa-search"></span>
-            <span class='fa fa-user'></span>
-            <span class="fa fa-shopping-cart"></span>
+            <span class="fa fa-search" onclick="updateMessage()"></span>
+            <span class='fa fa-user' onclick="updateMessage()"></span>
+            <span class="fa fa-shopping-cart" onclick="updateMessage()"></span>
         </div>
     </nav>
     <main id="main">
         <div class="header">
             <div id="product-category">
-                <span class="category">All</span>
-                <span class="category">Smoked Fish</span>
-                <span class="category">Canned Products</span>
-                <span class="category">Grains</span>
-                <span class="category">Others</span>
+                <span class="category" onclick="updateMessage()">All</span>
+                <span class="category" onclick="updateMessage()">Smoked Fish</span>
+                <span class="category" onclick="updateMessage()">Canned Products</span>
+                <span class="category" onclick="updateMessage()">Grains</span>
+                <span class="category" onclick="updateMessage()">Others</span>
 
             </div>
             <!-- <img src="https://thumbs.dreamstime.com/b/west-african-food-concept-traditional-wset-dishes-assortment-peanut-soup-jollof-rice-grilled-chicken-wings-dry-fried-bananas-143233355.jpg"
                 alt="african foods"> -->
-
         </div>
+        <div class="container">
+            <div class="slide">
+                <img class='image left-image' src="" alt="image" onclick="changePic(-1)">
+                <img class='image focus-image' src="" alt="image" onclick="updateMessage()">
+                <img class='image right-image' src="" alt="image" onclick="changePic(1)">
+                <button id="button-left" type="button" onclick="changePic(-1)">&lt</button>
+                <button id="button-right" type="button" onclick="changePic(1)">&gt</button>
+            </div>
+        </div>
+
     </main>
     <footer id="footer">
 
