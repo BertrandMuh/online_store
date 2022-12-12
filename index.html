@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="index.js" defer></script>
     <title>Organic Food SuperMarket</title>
 </head>
@@ -14,10 +15,18 @@
 <body>
     <nav id="navbar">
         <div class="navbar left">
-            <div class="menu-bars" onclick="updateMessage()">
-                <div class="bars"></div>
-                <div class="bars"></div>
-                <div class="bars"></div>
+            <span type="button" onclick="dropdownMenu()" class="fa fa-bars"></span>
+            <div id="products-category" class="dropdown-content">
+                <div>
+                    <div class="user dropdown"><span class="fa fa-user-circle"></span><span
+                            class="user-name">Bertrand</span>
+                    </div>
+                    <a class="category dropdown" onclick="updateMessage()">All</a>
+                    <a class="category dropdown" onclick="updateMessage()">Smoked Fish</a>
+                    <a class="category dropdown" onclick="updateMessage()">Canned Products</a>
+                    <a class="category dropdown" onclick="updateMessage()">Grains</a>
+                    <a class="category dropdown" onclick="updateMessage()">Others</a>
+                </div>
             </div>
             <span class="business-logo" onclick="refreshPage()">
                 Organic Food <br>SuperMarket
@@ -51,27 +60,16 @@
         </div>
     </nav>
     <main id="main">
-        <div class="header">
-            <div id="product-category">
-                <span class="category" onclick="updateMessage()">All</span>
-                <span class="category" onclick="updateMessage()">Smoked Fish</span>
-                <span class="category" onclick="updateMessage()">Canned Products</span>
-                <span class="category" onclick="updateMessage()">Grains</span>
-                <span class="category" onclick="updateMessage()">Others</span>
 
-            </div>
-            <!-- <img src="https://thumbs.dreamstime.com/b/west-african-food-concept-traditional-wset-dishes-assortment-peanut-soup-jollof-rice-grilled-chicken-wings-dry-fried-bananas-143233355.jpg"
-                alt="african foods"> -->
+
+        <div class="slide">
+            <img class='image left-image' src="" alt="image" onclick="changePic(-1)">
+            <img class='image focus-image' src="" alt="image" onclick="updateMessage()">
+            <img class='image right-image' src="" alt="image" onclick="changePic(1)">
+            <button id="button-left" type="button" onclick="changePic(-1)">&lt</button>
+            <button id="button-right" type="button" onclick="changePic(1)">&gt</button>
         </div>
-        <div class="container">
-            <div class="slide">
-                <img class='image left-image' src="" alt="image" onclick="changePic(-1)">
-                <img class='image focus-image' src="" alt="image" onclick="updateMessage()">
-                <img class='image right-image' src="" alt="image" onclick="changePic(1)">
-                <button id="button-left" type="button" onclick="changePic(-1)">&lt</button>
-                <button id="button-right" type="button" onclick="changePic(1)">&gt</button>
-            </div>
-        </div>
+
 
     </main>
     <footer id="footer">
